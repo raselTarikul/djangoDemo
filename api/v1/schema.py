@@ -9,3 +9,20 @@ registration_schema = ManualSchema(
         coreapi.Field('password', required=True, location='form', type='string', description='Password')
     ]
 )
+
+login_schema = ManualSchema(
+    description='Login Device',
+    fields=[
+        coreapi.Field('username', required=True, location='form', type='string', description='Username'),
+        coreapi.Field('password', required=True, location='form', type='string', description='Password')
+    ]
+)
+
+change_pass_schema = ManualSchema(
+    description='Change Password',
+    fields=[
+        coreapi.Field('username', required=True, location='form', type='string', description='Username'),
+        coreapi.Field('password', required=True, location='form', type='string', description='Password'),
+        coreapi.Field('new_password', required=True, location='form', type='string', description='New Password')
+    ]
+)

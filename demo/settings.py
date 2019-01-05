@@ -165,3 +165,10 @@ SWAGGER_SETTINGS = {
         'patch'
     ],
 }
+
+# Email settings
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'rbnislam@gmail.com'
+EMAIL_HOST_PASSWORD = 'Rbnislam2015'
+EMAIL_PORT = 587

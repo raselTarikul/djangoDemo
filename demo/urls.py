@@ -21,9 +21,12 @@ from rest_framework_swagger.views import get_swagger_view
 
 schema_view = get_swagger_view(title='Demo API v1')
 
+from app.views import activate
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('swagger/', schema_view),
     path('apps/', include('app.urls')),
     path('apis/', include('api.urls')),
+    path('activate/<str:uidb64>/<str:token>/', activate, name='activate'),
 ]
