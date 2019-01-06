@@ -26,10 +26,9 @@ class Company(models.Model):
 
     Name, Email address and Phone field is required
     """
-    name = models.CharField(_('email address'), max_length=200)
-    email_address = models.EmailField(_('email address'))
-    address = models.TextField(_('address'))
-    phone_number = models.CharField(_('email address'), max_length=200)
+    name = models.CharField(_('Name'), max_length=200)
+    address = models.TextField(_('Address'))
+    phone_number = models.CharField(_('Phone Number'), max_length=200)
     favourite = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='user_favourite')
 
     class Meta:
